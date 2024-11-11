@@ -1,0 +1,143 @@
+@import url(typography.css);
+
+body {
+    background-image: linear-gradient(to top, #004d00 0%, #006600 100%);
+    color: #f0f0f0;
+    width: auto;
+    min-width: 320px;
+}
+
+a { color: #66ff66; }
+a:hover { color: #99ff99; }
+
+button {
+    background-color: #008000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin: 0.63em 0;
+}
+
+input {
+    color: #2e7d32;
+    width: 100%;
+    height: 2.88em;
+    border-radius: 0.63em;
+    margin: 0.63em 0;
+    padding: 0.4em;
+}
+
+button:hover { background-color: #00b300; }
+
+.card {
+    background-image: linear-gradient(to right, #003300 0%, #004d00 100%);
+    color: #f0f0f0;
+    border-radius: 0.63em;
+    box-shadow: 0 0.25em 0.94em rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card__copy {
+    text-align: left;
+    padding: 0 1.25em 0 1.25em;
+}
+
+.card__space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+}
+
+.card__goal-content {
+    text-align: left;
+    max-width: 80%;
+    padding: 0 1.25em 2em 1.25em;
+    margin: auto;
+}
+
+.title-image,
+.card__project-image {
+    border-radius: 10%;
+    box-shadow: 0 0.425em 0.45em rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.3em;
+}
+
+.left {
+    text-align: left;
+}
+
+.main__header {
+    text-align: center;
+    padding-top: 1.25em;
+}
+
+.card__btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 0.63em;
+    width: auto;
+    text-decoration: none;
+    border-radius: 0.5em;
+    transition: background-color 2s ease-out 100ms
+}
+
+.card__btn:hover {
+    background-color: #3a893e;
+    color: #fff;
+}
+
+.main__footer {
+    grid-area: main__footer;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0 0 1.25em 0;
+}
+
+.center-vertically {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%; /* Ensure the card takes the full height of its container */
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #00ff3c, #ffd700, #ffa600);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+@media only screen and (min-width: 40em) {
+    .card__qr {
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+}
+
+#generated-qr-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#error-qr-data {
+    color: #ff0000;
+    font-weight: 700;
+}
